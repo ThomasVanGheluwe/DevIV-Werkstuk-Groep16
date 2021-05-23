@@ -26,6 +26,9 @@ async function init(){
         console.log("Huizen: ", huis);
         console.log("Villa's: ", villa);
         console.log("Appartementen: ", appartement);
+        //Get 1 element
+        element = getElement(1);
+        console.log("Element with index 1: ", element);
 }
 
 /************************************************************/
@@ -67,6 +70,11 @@ function add(array){
         villa.push(array);
     }
 }
+
+function getElement(index){
+    return objectData[index];
+}
+
 
 function loopOverData(array){
     array.map(add);
