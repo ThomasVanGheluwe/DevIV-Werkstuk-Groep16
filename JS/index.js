@@ -20,6 +20,18 @@ async function init(){
         await fetchData();
         //Sort the data
         bubbleSort(objectData);
+        console.log("Alle data: ", objectData);
+        //Map data according to type
+        loopOverData(objectData);
+        console.log("Huizen: ", huis);
+        console.log("Villa's: ", villa);
+        console.log("Appartementen: ", appartement);
+        //Get 1 element
+        element = getElement(1);
+        console.log("Element with index 1: ", element);
+        //Delete 1 element
+        removeElement(5);
+        console.log("Delete element with index5: ", objectData);
 }
 
 /************************************************************/
@@ -45,3 +57,32 @@ const bubbleSort = (unsorted) => {
 }
 
 /************************************************************/
+
+//COMPOSITE PATTERN
+
+let huis = [];
+let appartement = [];
+let villa = [];
+
+function add(array){
+    if(array.type === "huis"){
+        huis.push(array);
+    }else if(array.type === "appartement"){
+        appartement.push(array);
+    }else if(array.type === "villa"){
+        villa.push(array);
+    }
+}
+
+function getElement(index){
+    return objectData[index];
+}
+
+function removeElement(index){
+    objectData.splice(index); 
+ }
+
+
+function loopOverData(array){
+    array.map(add);
+}
