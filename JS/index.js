@@ -3,7 +3,7 @@
 let objectData = [];
 const woningenWithTuin = [];
 
-window.onload = () => init();
+window.onload = () => fetchData();
 
 async function fetchData(){
     await fetch('https://dev4werkstukapi.herokuapp.com/')
@@ -17,14 +17,14 @@ async function fetchData(){
 
     //Dit is een side effect, de state van objectData wordt aangepast (de data van de fetch wordt in de objectData array geplaatst)
     .then(data => objectData = data);
+
+    init();
 }
 
 
 /************************************************************/
 
 async function init(){
-    //Fetch the data
-    await fetchData();
     //Sort the data, we plaatsen de data van onze fetch in dataToSort en sorten de data met het bubleSort algoritme
     let dataToSort = objectData.map(x => x);
     bubbleSort(dataToSort);
