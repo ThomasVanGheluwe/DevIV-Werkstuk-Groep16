@@ -29,6 +29,9 @@ async function init(){
         //Get 1 element
         element = getElement(1);
         console.log("Element with index 1: ", element);
+        //Delete 1 element
+        removeElement(5);
+        console.log("Delete element with index5: ", objectData);
 }
 
 /************************************************************/
@@ -74,6 +77,10 @@ function add(array){
 function getElement(index){
     return objectData[index];
 }
+
+function removeElement(index){
+    objectData.splice(index); 
+ }
 
 
 function loopOverData(array){
