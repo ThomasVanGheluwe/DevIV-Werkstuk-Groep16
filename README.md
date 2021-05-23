@@ -1,5 +1,9 @@
 # DevIV-Werkstuk-Groep16
 
+## Link naar Git repository
+
+https://github.com/ThomasVanGheluwe/DevIV-Werkstuk-Groep16 
+
 ### BRONVERMELDING Funtional Programming VOLGENS APA STIJL
 
 - Arora, S. (2019, March 27). Understanding Higher-Order Functions in JavaScript - Bits and Pieces. Medium. https://blog.bitsrc.io/understanding-higher-order-functions-in-javascript-75461803bad
