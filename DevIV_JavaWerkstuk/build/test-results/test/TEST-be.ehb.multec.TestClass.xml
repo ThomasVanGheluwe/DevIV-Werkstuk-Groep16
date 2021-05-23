@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="be.ehb.multec.TestClass" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-05-23T16:31:09" hostname="DESKTOP-V5G4QCF" time="0.017">
+  <properties/>
+  <testcase name="StrategyTest" classname="be.ehb.multec.TestClass" time="0.002"/>
+  <testcase name="IteratorTest" classname="be.ehb.multec.TestClass" time="0.014"/>
+  <testcase name="CompositeTest" classname="be.ehb.multec.TestClass" time="0.001"/>
+  <system-out><![CDATA[Villa
+Een villa of landhuis is een (meestal) elegante, vrijstaande woning.
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

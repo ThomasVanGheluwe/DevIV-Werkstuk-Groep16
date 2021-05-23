@@ -1,0 +1,26 @@
+be/ehb/multec/HasATinyGarden.java
+ be.ehb.multec.HasATinyGarden
+be/ehb/multec/Appartement.java
+ be.ehb.multec.Appartement
+be/ehb/multec/Huis.java
+ be.ehb.multec.Huis
+be/ehb/multec/HasABigGarden.java
+ be.ehb.multec.HasABigGarden
+be/ehb/multec/Makelaar.java
+ be.ehb.multec.Makelaar
+be/ehb/multec/WoningComponent.java
+ be.ehb.multec.WoningComponent
+be/ehb/multec/Woning.java
+ be.ehb.multec.Woning
+be/ehb/multec/HasAGarden.java
+ be.ehb.multec.HasAGarden
+be/ehb/multec/Villa.java
+ be.ehb.multec.Villa
+be/ehb/multec/WoningCreator.java
+ be.ehb.multec.WoningCreator
+be/ehb/multec/Garden.java
+ be.ehb.multec.Garden
+be/ehb/multec/HasNotAGarden.java
+ be.ehb.multec.HasNotAGarden
+be/ehb/multec/WoningGroup.java
+ be.ehb.multec.WoningGroup
