@@ -13,3 +13,27 @@ async function fetchData(){
       })
     .then(data => objectData = data);
 }
+
+/************************************************************/
+
+//ALGORITME
+
+const bubbleSort = (unsorted) => {
+    let isSorted = false;
+    let length = unsorted.length - 1;
+    while(!isSorted){
+        isSorted = true;
+
+        for(let i = 0; i < length; i++){
+            if(unsorted[i].type > unsorted[i + 1].type){
+                let swap = unsorted[i].type;
+                unsorted[i].type = unsorted[i + 1].type;
+                unsorted[i + 1].type = swap;
+                isSorted = false;
+            }
+        }
+    }
+    return unsorted;
+}
+
+/************************************************************/
