@@ -1,4 +1,4 @@
-package main.java;
+package be.ehb.multec;
 import java.util.ArrayList;
 import java.util.Iterator;
 

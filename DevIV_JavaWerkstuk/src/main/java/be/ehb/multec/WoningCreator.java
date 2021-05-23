@@ -1,4 +1,4 @@
-package main.java;
+package be.ehb.multec;
 
 public class WoningCreator {
     public static void main(String[] args){

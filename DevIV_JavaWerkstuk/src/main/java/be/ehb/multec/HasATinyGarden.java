@@ -1,4 +1,4 @@
-package main.java;
+package be.ehb.multec;
 
 public class HasATinyGarden implements Garden {
     public String garden() {

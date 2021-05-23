@@ -1,6 +1,5 @@
-package test.java;
+package be.ehb.multec;
 
-import main.java.*;
 import org.junit.Assert;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.Test;
