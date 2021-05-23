@@ -1,4 +1,5 @@
 let objectData = [];
+const woningenWithTuin = [];
 
 window.onload = () => init();
 
@@ -16,22 +17,25 @@ async function fetchData(){
 
 
 async function init(){
-        //Fetch the data
-        await fetchData();
-        //Sort the data
-        bubbleSort(objectData);
-        console.log("Alle data: ", objectData);
-        //Map data according to type
-        loopOverData(objectData);
-        console.log("Huizen: ", huis);
-        console.log("Villa's: ", villa);
-        console.log("Appartementen: ", appartement);
-        //Get 1 element
-        element = getElement(1);
-        console.log("Element with index 1: ", element);
-        //Delete 1 element
-        removeElement(5);
-        console.log("Delete element with index5: ", objectData);
+    //Fetch the data
+    await fetchData();
+    //Sort the data
+    bubbleSort(objectData);
+    console.log("Alle data: ", objectData);
+    //Map data according to type
+    loopOverData(objectData);
+    console.log("Huizen: ", huis);
+    console.log("Villa's: ", villa);
+    console.log("Appartementen: ", appartement);
+    //Get 1 element
+    element = getElement(1);
+    console.log("Element with index 1: ", element);
+    //Delete 1 element
+    removeElement(5);
+    console.log("Delete element with index5: ", objectData);
+    //Add garden depending the price
+    const woningenWithTuin = objectData.map(addEenTuin(woningType));
+    console.log("Tuin toevoegen aan woning afhankelijk van de prijs: ", woningenWithTuin)
 }
 
 /************************************************************/
@@ -86,3 +90,44 @@ function removeElement(index){
 function loopOverData(array){
     array.map(add);
 }
+
+
+/************************************************************/
+
+//STRATEGY PATTERN
+
+const woningType = {
+    appartement:{
+        tuin: 'Geen tuin.'
+    },
+    huis:{
+        tuin: 'een simpele tuin.'
+    },
+    villa:{
+        tuin: 'een majestueuze tuin.'
+    }
+}
+
+function getPrijs(prijs){
+    if (prijs >= 500000 ) {
+        return 'villa'
+    }else if(prijs >= 300000){
+        return 'huis'
+    }else{
+        return 'appartement'
+    }
+}
+
+function addEenTuin(woningtypes){
+    return function(woning){
+        const prijs = getPrijs(woning.prijs)
+        const woningtype = woningtypes[prijs];
+        const woningWithTuin = {
+            ...woning,
+            tuin: woningtype.tuin
+        };
+        return woningWithTuin;
+    }
+}
+
+/************************************************************/
