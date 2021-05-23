@@ -14,6 +14,14 @@ async function fetchData(){
     .then(data => objectData = data);
 }
 
+
+async function init(){
+        //Fetch the data
+        await fetchData();
+        //Sort the data
+        bubbleSort(objectData);
+}
+
 /************************************************************/
 
 //ALGORITME
