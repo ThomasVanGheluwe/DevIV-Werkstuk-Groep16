@@ -20,6 +20,12 @@ async function init(){
         await fetchData();
         //Sort the data
         bubbleSort(objectData);
+        console.log("Alle data: ", objectData);
+        //Map data according to type
+        loopOverData(objectData);
+        console.log("Huizen: ", huis);
+        console.log("Villa's: ", villa);
+        console.log("Appartementen: ", appartement);
 }
 
 /************************************************************/
@@ -45,3 +51,23 @@ const bubbleSort = (unsorted) => {
 }
 
 /************************************************************/
+
+//COMPOSITE PATTERN
+
+let huis = [];
+let appartement = [];
+let villa = [];
+
+function add(array){
+    if(array.type === "huis"){
+        huis.push(array);
+    }else if(array.type === "appartement"){
+        appartement.push(array);
+    }else if(array.type === "villa"){
+        villa.push(array);
+    }
+}
+
+function loopOverData(array){
+    array.map(add);
+}
