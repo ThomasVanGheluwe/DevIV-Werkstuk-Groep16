@@ -1,3 +1,5 @@
+//Alle console logs zijn side effects, maar ze zijn noodzakelijk voor het tonen van informatie
+
 let objectData = [];
 const woningenWithTuin = [];
 
